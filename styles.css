@@ -317,3 +317,148 @@ h1 {
         font-size: 1rem;
     }
 }
+
+/* Melhorias para mobile */
+@media (max-width: 768px) {
+    .cabecalho {
+        text-align: center;
+        padding: 4rem 1rem;
+    }
+
+    .foto-perfil {
+        width: 180px;
+        height: 180px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .cabecalho-sub-titulo {
+        font-size: 1.2rem;
+    }
+
+    .sobre {
+        padding: 4rem 1.5rem;
+    }
+
+    .sobre-titulo {
+        font-size: 2.5rem;
+    }
+
+    .sobre-caixa {
+        padding: 1.5rem;
+    }
+
+    .projetos-caixa {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projetos-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .contatos {
+        padding: 4rem 1.5rem;
+    }
+
+    .contatos-titulo {
+        font-size: 2.2rem;
+    }
+
+    .formulario-contato {
+        padding: 1.5rem;
+    }
+}
+
+/* Melhorias para mobile */
+@media (max-width: 768px) {
+    .cabecalho {
+        text-align: center;
+        padding: 4rem 1rem;
+        position: relative;
+    }
+
+    .foto-perfil {
+        width: 180px;
+        height: 180px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .cabecalho-sub-titulo {
+        font-size: 1.2rem;
+    }
+
+    .sobre {
+        padding: 4rem 1.5rem;
+    }
+
+    .sobre-titulo {
+        font-size: 2.5rem;
+    }
+
+    .sobre-caixa {
+        padding: 1.5rem;
+    }
+
+    .projetos-caixa {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projetos-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .contatos {
+        padding: 4rem 1.5rem;
+    }
+
+    .contatos-titulo {
+        font-size: 2.2rem;
+    }
+
+    .formulario-contato {
+        padding: 1.5rem;
+    }
+
+    /* Centralizar menu acima da foto */
+    .navegacao {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 1rem 0;
+        background: rgba(15, 23, 42, 0.8);
+    }
+
+    .menu {
+        display: flex;
+        gap: 1.5rem;
+    }
+}
+
+/* Mantém o menu original para desktop */
+@media (min-width: 769px) {
+    .menu {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background: transparent;
+        padding: 0;
+        width: auto;
+        max-width: none;
+    }
+}
