@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ferreira | Portifólio</title>
+</head>
+
+<body>
+    <div class="particulas"></div>
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Início</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contatos" class="menu-link">Contatos</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        <img src="./IMG/Ft - 3.jpg" alt="Foto de Luiz Ferreira" class="foto-perfil">
+        <h1>Luiz Ferreira</h1>
+        <p class="cabecalho-sub-titulo">Desenvolvedor Iniciante</p>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+                Olá! Sou um Dev Iniciante apaixonado por criar experências web únicas e memoráveis. Combino código limpo
+                com desing moderno para criar soluções web que não apenas funcionam, mas também impressionam.
+            </p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo"> Meus Projetos</h2>
+        <div class="projetos-caixa">
+
+            <div class="projetos-card">
+                <img src="./IMG/1 proj.jpg" alt="Projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Quiz interativo</h3>
+                    <p class="paragrafo-projetos">Um Quiz interativo com perguntas variadas, para base de conhecimento.
+                    </p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="./IMG/2 proj.jpg" alt="Projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Simulador de Orçamento Pessoal</h3>
+                    <p class="paragrafo-projetos">Simulador de Orçamento Pessoal, para que você possa ter uma ideia de
+                        como
+                        gastar seu dinheiro.</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="./IMG/3 proj.jpg" alt="Projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Plataforma de Agendamento</h3>
+                    <p class="paragrafo-projetos">Plataforma de Agendamento, para que você possa agendar seus
+                        compromissos.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="4" id="Mensagem"></textarea>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar Whatsapp</button>
+        </form>
+    </section>
+
+    <script>
+        function enviarWhats(event) {
+            event.preventDefault();
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('Mensagem').value; // Corrigido para "Mensagem" com M maiúsculo
+            const telefone = '5595991338457';
+
+            const texto = `Olá! Me chamo ${nome}, ${mensagem}`;
+            const msgFormatada = encodeURIComponent(texto);
+
+            const URL = `https://wa.me/${telefone}?text=${msgFormatada}`;
+
+            window.open(URL, '_blank');
+        }
+    </script>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector(".menu").classList.toggle("active");
+        }
+    </script>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+</body>
+
+</html>
